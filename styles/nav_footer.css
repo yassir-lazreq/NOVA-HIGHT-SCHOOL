@@ -38,6 +38,7 @@ div.logo {
     display: flex;
     align-items: center;
     height: var(--nav-height);
+    margin-right: 10px;
 }
 
 
@@ -46,6 +47,7 @@ nav div a {
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
+    margin-right: 5px;
 }
 
 img.image_logo {
@@ -109,7 +111,7 @@ nav a:hover {
 }
 
 /* Mobile Styles */
-@media (max-width: 810px) {
+@media (max-width: 900px) {
     nav {
         padding: 10px 20px;
     }
