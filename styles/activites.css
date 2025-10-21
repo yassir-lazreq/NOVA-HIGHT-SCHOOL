@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-height: 60px;
+    --primary-color: #584738;
+    --secondary-color: #cfcabf;
+    --hover-color: #ddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: calc(var(--nav-height) + 40px);
+}
+
+.activities-container {
+    width: 70%;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.activities-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    background-color: #b59e7d;
+    padding: 10px 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.activity-section {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.activity-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.cards-grid {
+    display: grid;
+    margin-right: 50px;
+    margin-left: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.activity-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.activity-card h3 {
+    margin: 10px 0;
+    width: 90%;
+    color: var(--primary-color);
+    background-color: #e2dfd8 ;
+    border-radius: 8px;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.activity-card p {
+    color: #555;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+}
+
+.card-footer {
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
