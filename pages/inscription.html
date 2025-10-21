@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#" onclick="showPage('accueil')">Accueil</a>
+                <a href="#" onclick="showPage('programme')">Programme</a>
+                <a href="#" onclick="showPage('activites')">Activités</a>
+                <a href="#" onclick="showPage('inscription')">Inscription</a>
+                <a href="#" onclick="showPage('contact')">Contact</a>
+            </nav>
+        </header>
+
+        <div id="inscription" class="page">
+            <h2>Inscription</h2>
+
+            <p>
+                Inscrivez-vous dès maintenant pour garantir votre place à notre journée
+                portes ouvertes. L'inscription est gratuite et obligatoire.
+            </p>
+
+            <div class="warning-box">
+                <strong>Attention :</strong> Les places sont limitées pour certaines
+                activités. Nous vous conseillons de vous inscrire rapidement.
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label>Nom complet *</label>
+                    <input type="text" placeholder="Votre nom et prénom" />
+                </div>
+
+                <div class="form-group">
+                    <label>Adresse email *</label>
+                    <input type="email" placeholder="votre.email@exemple.com" />
+                </div>
+
+                <div class="form-group">
+                    <label>Numéro de téléphone *</label>
+                    <input type="tel" placeholder="06 12 34 56 78" />
+                </div>
+
+                <div class="form-group">
+                    <label>Tranche d'âge *</label>
+                    <select>
+                        <option value="">Sélectionnez votre âge</option>
+                        <option>Moins de 12 ans</option>
+                        <option>12-14 ans</option>
+                        <option>15-17 ans</option>
+                        <option>18 ans et plus</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Activités souhaitées (maximum 3)</label>
+                    <textarea
+                        rows="4"
+                        placeholder="Indiquez les activités qui vous intéressent..."
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre de personnes accompagnantes</label>
+                    <input type="number" value="0" min="0" max="5" />
+                </div>
+
+                <div class="form-group">
+                    <label>Commentaires ou questions</label>
+                    <textarea
+                        rows="5"
+                        placeholder="Des questions particulières ? Des besoins spécifiques ?"
+                    ></textarea>
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn"
+                    style="font-size: 16px; padding: 15px 30px"
+                >
+                    Valider mon inscription
+                </button>
+            </form>
+
+            <div class="info-box" style="margin-top: 30px">
+                <p>
+                    <strong>Confirmation :</strong> Vous recevrez un email de confirmation
+                    dans les 24 heures avec tous les détails pratiques.
+                </p>
+                <p>
+                    <strong>Contact :</strong> Pour toute question, contactez-nous au 01
+                    23 45 67 89
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Lycée Excellence - Tous droits réservés</p>
+            <p>Mentions légales | Politique de confidentialité | Plan du site</p>
+            <p>Développé par l'équipe informatique de l'établissement</p>
+        </footer>
+    </body>
+</html>
