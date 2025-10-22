@@ -6,15 +6,29 @@
         <title>Document</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/styles/programme.css">
+        <link rel="stylesheet" href="/styles/nav_footer.css">
     </head>
     <body>
-        <header>
+<header>
             <nav>
-                <a href="#" onclick="showPage('accueil')">Accueil</a>
-                <a href="#" onclick="showPage('programme')">Programme</a>
-                <a href="#" onclick="showPage('activites')">Activités</a>
-                <a href="#" onclick="showPage('inscription')">Inscription</a>
-                <a href="#" onclick="showPage('contact')">Contact</a>
+                <a href="../index.html" class="">
+                    <div class="logo">
+                        <img src="/assets/téléchargement (5).png" alt="Logo Lycée Excellence" class="image_logo" />
+                        <span>NOVA HIGH SCHOOL</span>
+                    </div>
+                </a>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="nav-links">
+                    <a href="../index.html">Accueil</a>
+                    <a href="programme.html">Programme</a>
+                    <a href="activites.html" class="active">Activités</a>
+                    <a href="inscription.html">Inscription</a>
+                    <a href="contact.html">Contact</a>
+                </div>
             </nav>
         </header>
 
@@ -102,5 +116,6 @@
             <p>Mentions légales | Politique de confidentialité | Plan du site</p>
             <p>Développé par l'équipe informatique de l'établissement</p>
         </footer>
+        <script src="../scripts/script.js"></script>
     </body>
 </html>
