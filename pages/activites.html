@@ -1,142 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="#" onclick="showPage('accueil')">Accueil</a>
-            <a href="#" onclick="showPage('programme')">Programme</a>
-            <a href="#" onclick="showPage('activites')">Activités</a>
-            <a href="#" onclick="showPage('inscription')">Inscription</a>
-            <a href="#" onclick="showPage('contact')">Contact</a>
-        </nav>
-    </header>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nos Activités - NOVA HIGH SCHOOL</title>
+        <link rel="stylesheet" href="/styles/nav_footer.css">
+        <link rel="stylesheet" href="/styles/activites.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html" class="">
+                    <div class="logo">
+                        <img src="../assets/logo.png" alt="Logo Lycée Excellence" class="image_logo" />
+                        <span>NOVA HIGH SCHOOL</span>
+                    </div>
+                </a>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="nav-links">
+                    <a href="../index.html">Accueil</a>
+                    <a href="programme.html">Programme</a>
+                    <a href="activites.html" class="active">Activités</a>
+                    <a href="inscription.html">Inscription</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </header>
 
-    <div id="activites" class="page">
-        <h2>Nos activités</h2>
+        <div class="activities-container">
+            <div class="activities-header">
+                <h1>NOS ACTIVITÉS</h1>
+                <p>Plus de 25 expériences différentes pour explorer, créer et vous dépasser.</p>
+            </div>
 
-        <p>
-            Plus de 25 activités différentes vous attendent tout au long de la
-            journée. Voici un aperçu de ce qui vous est proposé :
-        </p>
+            <!-- Sciences et Technologie -->
+            <section class="activity-section">
+                <h2>Sciences et Technologie</h2>
+                <div class="cards-grid">
+                    <div class="activity-card">
+                        <h3>Expériences de chimie</h3>
+                        <p>Réactions chimiques spectaculaires et sécurisées</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                45 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Laboratoire A
+                            </span>
+                        </div>
+                    </div>
 
-        <h3>Sciences et Technologie</h3>
-        <table>
-            <tr>
-                <th>Activité</th>
-                <th>Description</th>
-                <th>Lieu</th>
-                <th>Durée</th>
-            </tr>
-            <tr>
-                <td>Expériences de chimie</td>
-                <td>Réactions chimiques spectaculaires et sécurisées</td>
-                <td>Laboratoire A</td>
-                <td>45 min</td>
-            </tr>
-            <tr>
-                <td>Observation microscopique</td>
-                <td>Découverte du monde microscopique</td>
-                <td>Laboratoire B</td>
-                <td>30 min</td>
-            </tr>
-            <tr>
-                <td>Programmation Python</td>
-                <td>Initiation au code informatique</td>
-                <td>Salle info 1</td>
-                <td>60 min</td>
-            </tr>
-            <tr>
-                <td>Robotique</td>
-                <td>Programmation et pilotage de robots</td>
-                <td>Salle info 2</td>
-                <td>45 min</td>
-            </tr>
-        </table>
+                    <div class="activity-card">
+                        <h3>Observation microscopique</h3>
+                        <p>Découverte du monde microscopique</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                30 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Laboratoire B
+                            </span>
+                        </div>
+                    </div>
 
-        <h3>Arts et Culture</h3>
-        <table>
-            <tr>
-                <th>Activité</th>
-                <th>Description</th>
-                <th>Lieu</th>
-                <th>Durée</th>
-            </tr>
-            <tr>
-                <td>Atelier peinture</td>
-                <td>Techniques acrylique et aquarelle</td>
-                <td>Salle d'arts</td>
-                <td>60 min</td>
-            </tr>
-            <tr>
-                <td>Sculpture sur argile</td>
-                <td>Création de petites sculptures</td>
-                <td>Atelier 3D</td>
-                <td>90 min</td>
-            </tr>
-            <tr>
-                <td>Photographie numérique</td>
-                <td>Techniques de base et retouche</td>
-                <td>Studio photo</td>
-                <td>45 min</td>
-            </tr>
-            <tr>
-                <td>Musique</td>
-                <td>Initiation aux instruments</td>
-                <td>Salle de musique</td>
-                <td>40 min</td>
-            </tr>
-        </table>
+                    <div class="activity-card">
+                        <h3>Programmation Python</h3>
+                        <p>Initiation au code informatique</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                60 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Salle info 1
+                            </span>
+                        </div>
+                    </div>
 
-        <h3>Sports et Bien-être</h3>
-        <table>
-            <tr>
-                <th>Activité</th>
-                <th>Description</th>
-                <th>Lieu</th>
-                <th>Durée</th>
-            </tr>
-            <tr>
-                <td>Basketball</td>
-                <td>Tournoi et entrainement</td>
-                <td>Gymnase</td>
-                <td>90 min</td>
-            </tr>
-            <tr>
-                <td>Football</td>
-                <td>Matchs amicaux</td>
-                <td>Terrain extérieur</td>
-                <td>90 min</td>
-            </tr>
-            <tr>
-                <td>Escalade</td>
-                <td>Initiation et parcours</td>
-                <td>Mur d'escalade</td>
-                <td>30 min</td>
-            </tr>
-            <tr>
-                <td>Yoga</td>
-                <td>Séance de relaxation</td>
-                <td>Salle polyvalente</td>
-                <td>45 min</td>
-            </tr>
-        </table>
+                    <div class="activity-card">
+                        <h3>Robotique</h3>
+                        <p>Programmation et pilotage de robots</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                45 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Salle info 2
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="info-box">
-            <strong>Important :</strong> Les ateliers sont limités en nombre de
-            participants. Pensez à vous inscrire tôt dans la journée pour les
-            activités qui vous intéressent.
+            <!-- Arts et Culture -->
+            <section class="activity-section">
+                <h2>Arts et Culture</h2>
+                <div class="cards-grid">
+                    <div class="activity-card">
+                        <h3>Atelier peinture</h3>
+                        <p>Techniques acrylique et aquarelle</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                60 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Salle d'arts
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <h3>Sculpture sur argile</h3>
+                        <p>Création de petites sculptures</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                90 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Atelier 3D
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <h3>Photographie numérique</h3>
+                        <p>Techniques de base et retouche</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                45 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Studio photo
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <h3>Musique</h3>
+                        <p>Initiation aux instruments</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                40 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Salle de musique
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sports et Bien-être -->
+            <section class="activity-section">
+                <h2>Sports et Bien-être</h2>
+                <div class="cards-grid">
+                    <div class="activity-card">
+                        <h3>Basketball</h3>
+                        <p>Tournoi et entrainement</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                90 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Gymnase
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <h3>Football</h3>
+                        <p>Matchs amicaux</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                90 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Terrain extérieur
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <h3>Escalade</h3>
+                        <p>Initiation et parcours</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                30 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Mur d'escalade
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <h3>Yoga</h3>
+                        <p>Séance de relaxation</p>
+                        <div class="card-footer">
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M8 4v4l3 2"/>
+                                </svg>
+                                45 min
+                            </span>
+                            <span class="info-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 2C5.5 2 3 3.5 3 6c0 2 2 5 5 8 3-3 5-6 5-8 0-2.5-2.5-4-5-4z"/>
+                                </svg>
+                                Salle polyvalente
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
 
         <footer>
             <p>&copy; 2025 Lycée Excellence - Tous droits réservés</p>
             <p>Mentions légales | Politique de confidentialité | Plan du site</p>
             <p>Développé par l'équipe informatique de l'établissement</p>
         </footer>
+
+        <script src="../scripts/script.js"></script>
     </body>
 </html>
