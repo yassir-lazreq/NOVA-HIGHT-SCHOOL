@@ -5,26 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulaire d'inscription - NOVA HIGHT SCHOOL</title>
   <link rel="stylesheet" href="/styles/inscription.css">
+  <link rel="stylesheet" href="/styles/nav_footer.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="inner">
-      <div class="logo">
-        <div class="logo-mark" aria-hidden="true"></div>
-        <div class="logo-text">
-          <strong>NOVA HIGHT</strong><span>SCHOOL</span>
+<body class = "Body"> 
+
+  <header>
+    <nav>
+      <a href="../index.html" class="">
+        <div class="logo">
+          <img src="../assets/image.png" alt="Nova high school" class="image_logo" />
+          <span>NOVA HIGH SCHOOL</span>
         </div>
+      </a>
+
+      <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="programme.html">Programme</a>
+        <a href="activites.html" class="active">Activités</a>
+        <a href="inscription.html">Inscription</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#">Accueil</a>
-        <a href="#">Programme</a>
-        <a href="#">Activités</a>
-        <a href="#" class="active">Inscription</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
+    </nav>
   </header>
 
+  
   <main class="page-inner">
     <div class="form-container card">
       <h1>Formulaire d'inscription</h1>
@@ -69,85 +79,96 @@
     </div>
   </main>
 
-  <footer class="site-footer">
+   <footer class="footer">
     © 2025 NOVA HIGHT SCHOOL. Former les esprits de demain avec passion, innovation et excellence.
-  </footer>
+  </footer>  
+
+   <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function(){
+        const isActive = navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+    
+    const wrapper = document.getElementById('activities-select');
+    if (!wrapper) return;
+    const toggle = wrapper.querySelector('.ms-toggle');
+    const optionsList = wrapper.querySelector('.ms-options');
+    const checkboxes = optionsList.querySelectorAll('input[type="checkbox"]');
+    const hidden = document.getElementById('activities-input');
+    const max = Number(wrapper.dataset.max) || 3;
+
+    try {
+      const saved = JSON.parse(localStorage.getItem('activities') || '[]');
+      if (Array.isArray(saved) && saved.length) {
+        checkboxes.forEach(cb => { if (saved.includes(cb.value)) cb.checked = true; });
+        updateHidden();
+        updateToggleText();
+      }
+    } catch(e){ /* ignore */ }
+
+    toggle.addEventListener('click', function(e){
+      const open = !optionsList.hidden;
+      optionsList.hidden = open;
+      toggle.setAttribute('aria-expanded', String(!open));
+      if (!open) optionsList.querySelector('input[type="checkbox"]')?.focus();
+    });
+
+    document.addEventListener('click', function(e){
+      if (!wrapper.contains(e.target) && !hamburger?.contains(e.target)) {
+        optionsList.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    wrapper.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') {
+        optionsList.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', function(){
+        const selected = Array.from(checkboxes).filter(c => c.checked);
+        if (selected.length > max) {
+          cb.checked = false;
+          alert('Vous pouvez sélectionner au maximum ' + max + ' activités.');
+          return;
+        }
+        updateHidden();
+        updateToggleText();
+        localStorage.setItem('activities', JSON.stringify(Array.from(checkboxes).filter(c=>c.checked).map(c=>c.value)));
+      });
+    });
+
+    function updateHidden(){
+      const vals = Array.from(checkboxes).filter(c=>c.checked).map(c=>c.value);
+      hidden.value = vals.join(',');
+    }
+
+    function updateToggleText(){
+      const labels = Array.from(checkboxes).filter(c=>c.checked).map(c=>c.parentElement.textContent.trim());
+      toggle.textContent = labels.length ? labels.join(', ') : 'Sélectionner les activités';
+    }
+
+    const form = wrapper.closest('form');
+    form?.addEventListener('submit', function(){ updateHidden(); });
+  });
+  </script> 
 </body>
 </html>
-
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  const wrapper = document.getElementById('activities-select');
-  if (!wrapper) return;
-  const toggle = wrapper.querySelector('.ms-toggle');
-  const optionsList = wrapper.querySelector('.ms-options');
-  const checkboxes = optionsList.querySelectorAll('input[type="checkbox"]');
-  const hidden = document.getElementById('activities-input');
-  const max = Number(wrapper.dataset.max) || 3;
-
-  
-  try {
-    const saved = JSON.parse(localStorage.getItem('activities') || '[]');
-    if (Array.isArray(saved) && saved.length) {
-      checkboxes.forEach(cb => { if (saved.includes(cb.value)) cb.checked = true; });
-      updateHidden();
-      updateToggleText();
-    }
-  } catch(e){  }
-
-  
-  toggle.addEventListener('click', function(e){
-    const open = !optionsList.hidden;
-    optionsList.hidden = open;
-    toggle.setAttribute('aria-expanded', String(!open));
-    if (!open) optionsList.querySelector('input[type="checkbox"]')?.focus();
-  });
-
-  
-  document.addEventListener('click', function(e){
-    if (!wrapper.contains(e.target)) {
-      optionsList.hidden = true;
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-
-  wrapper.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') {
-      optionsList.hidden = true;
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.focus();
-    }
-  });
-
- 
-  checkboxes.forEach(cb => {
-    cb.addEventListener('change', function(){
-      const selected = Array.from(checkboxes).filter(c => c.checked);
-      if (selected.length > max) {
-       
-        cb.checked = false;
-        alert('Vous pouvez sélectionner au maximum ' + max + ' activités.');
-        return;
-      }
-      updateHidden();
-      updateToggleText();
-      localStorage.setItem('activities', JSON.stringify(Array.from(checkboxes).filter(c=>c.checked).map(c=>c.value)));
-    });
-  });
-
-  function updateHidden(){
-    const vals = Array.from(checkboxes).filter(c=>c.checked).map(c=>c.value);
-    hidden.value = vals.join(',');
-  }
-
-  function updateToggleText(){
-    const labels = Array.from(checkboxes).filter(c=>c.checked).map(c=>c.parentElement.textContent.trim());
-    toggle.textContent = labels.length ? labels.join(', ') : 'Sélectionner les activités';
-  }
-
-
-  const form = wrapper.closest('form');
-  form?.addEventListener('submit', function(){ updateHidden(); });
-});
-</script>
