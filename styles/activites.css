@@ -9,12 +9,14 @@
     --primary-color: #584738;
     --secondary-color: #cfcabf;
     --hover-color: #ddd;
+    --font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
     padding-top: calc(var(--nav-height) + 40px);
+
 }
 
 .activities-container {
@@ -122,4 +124,28 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.alert-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.alert-box {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 30px;
+    width: 70%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    color: #856404;
+    line-height: 1.6;
+}
+
+.alert-box strong {
+    color: #856404;
+    font-weight: bold;
 }
