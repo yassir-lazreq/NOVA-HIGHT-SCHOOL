@@ -91,10 +91,20 @@
     margin: 1rem 0;
     padding: 10px;
     background-color: #B59E7D;
+    transition: all 0.3s ease;
 }
+.timeall h3:hover {
+    
+    font-size: 1rem;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.399);
+    transform: scale(1.01);
+    cursor: cell;
+  }
 .timeall p{
     font-family: 'Poppins', sans-serif;
+    
 }
+
 
 @media ( min-height:690px) and ( max-width: 890px) {
   .line {
@@ -147,6 +157,7 @@
    
     
   }
+  
   .timeall p{
     width: 20rem;
 }
