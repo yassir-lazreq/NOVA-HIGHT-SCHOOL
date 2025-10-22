@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#programme {
+    background-color:#F1EADA ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: hidden;
+    
+}
+.page h2{
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+.line {
+    background-color: white;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80rem;
+}
+.timeall {
+    margin: 2rem;
+    border: 0.2rem solid black;
+    width: 2px;
+    height: 80rem;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+
+}
+.timeline-item0 , .timeline-item1 ,.timeline-item2 ,.timeline-item3 ,.timeline-item4,.timeline-item5,.timeline-item6{
+
+   
+    width: 24rem;
+    height: 10rem;
+    
+}
+.timeline-item0 ,.timeline-item2 ,.timeline-item4,.timeline-item6 {
+
+   
+    margin-right: 30rem;
+    position: relative;
+
+}
+
+.timeline-item1 ,.timeline-item3 ,.timeline-item5 {
+    margin-left: 30rem;
+     position: relative;
+
+}
+.timeline-item0::before,.timeline-item2::before,.timeline-item4::before,.timeline-item6::before{
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 10rem;
+    height: 4px;
+    background-color: black;
+}
+.timeline-item1::after,.timeline-item3::after,.timeline-item5::after{
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 70%;
+    width: 10rem;
+    height: 4px;
+    background-color: black;
+}
+.time {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+.timeline-item1 span,.timeline-item3 span,.timeline-item5 span {
+ 
+    margin-left: 15rem;
+}
+.timeall h3 {
+    margin: 1rem 0;
+    padding: 10px;
+    background-color: #B59E7D;
+}
+.timeall p{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media ( min-height:690px) and ( max-width: 890px) {
+  .line {
+    width: 100%;
+    margin: 0;
+  }
+
+  .timeall {
+    border: none;
+    border-left: 4px solid black;
+    width: 90%;
+    height: auto;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2rem 0;
+    overflow-x: hidden;
+  }
+  .timeline-item0::before,.timeline-item2::before,.timeline-item4::before,.timeline-item6::before{
+    content:"" ;
+    position: absolute;
+    top: 6%;
+    left: -10%;
+    width: 15rem;
+    height: 4px;
+    background-color: black;
+     }
+
+  .timeline-item0,.timeline-item1,.timeline-item2,.timeline-item3,.timeline-item4,.timeline-item5,.timeline-item6 {
+    margin: 2rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .timeline-item1::after,.timeline-item3::after,.timeline-item5::after {
+    content: "";
+    position: absolute;
+    top: 6%;
+    left: -10%;
+    width: 15rem;
+    height: 4px;
+    background-color: black;
+
+
+  }
+
+  .timeall h3 {
+    
+    font-size: 1rem;
+   
+    
+  }
+  .timeall p{
+    width: 20rem;
+}
+ 
+  .time {
+    font-size: 1.2rem;
+  }
+
+  .timeline-item0 span,.timeline-item2 span,.timeline-item4 span,.timeline-item6,.timeline-item1 span,.timeline-item3 span,.timeline-item5 span {
+    margin-left: 10rem;
+  }
+  .timeall span {
+   
+    margin-left: 13.5rem;
+  }
+}@media ( max-width: 690px) {
+  .line {
+    width: 100%;
+    margin: 0;
+  }
+
+  .timeall {
+    border: none;
+    border-left: 4px solid black;
+    width: 90%;
+    height: auto;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2rem 0;
+    overflow-x: hidden;
+  }
+  .timeline-item0::before,.timeline-item2::before,.timeline-item4::before,.timeline-item6::before{
+    content: "";
+    position: absolute;
+    top: 6%;
+    left: -10%;
+    width: 10rem;
+    height: 4px;
+    background-color: black;
+     }
+
+  .timeline-item0,.timeline-item1,.timeline-item2,.timeline-item3,.timeline-item4,.timeline-item5,.timeline-item6 {
+    margin: 2rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .timeline-item1::after,.timeline-item3::after,.timeline-item5::after {
+    content: "";
+    position: absolute;
+    top: 6%;
+    left: -10%;
+    width: 10rem;
+    height: 4px;
+    background-color: black;
+
+
+  }
+
+  .timeall h3 {
+    
+    font-size: 1rem;
+   
+    
+  }
+  
+
+  .timeall p{
+    width: 15rem;
+}
+ 
+  .time {
+    font-size: 1.2rem;
+  }
+
+  
+  .timeall span {
+   
+    margin-left: 10rem;
+  }
+}
