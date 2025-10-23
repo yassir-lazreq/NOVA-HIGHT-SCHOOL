@@ -1,176 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire d'inscription - NOVA HIGHT SCHOOL</title>
-  <link rel="stylesheet" href="/styles/nav_footer.css">
-  <link rel="stylesheet" href="/styles/inscription.css">
-</head>
-<body > 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulaire d'inscription - NOVA HIGHT SCHOOL</title>
+        <link rel="stylesheet" href="/styles/nav_footer.css">
+        <link rel="stylesheet" href="/styles/inscription.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html" class="">
+                    <div class="logo">
+                        <img src="../assets/logo.png" alt="Nova high school" class="image_logo" />
+                        <span>NOVA HIGH SCHOOL</span>
+                    </div>
+                </a>
 
-  <header>
-    <nav>
-      <a href="../index.html" class="">
-        <div class="logo">
-          <img src="../assets/image.png" alt="Nova high school" class="image_logo" />
-          <span>NOVA HIGH SCHOOL</span>
-        </div>
-      </a>
+                <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
 
-      <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-
-      <div class="nav-links">
-        <a href="../index.html">Accueil</a>
-        <a href="programme.html">Programme</a>
-        <a href="activites.html" class="active">Activités</a>
-        <a href="inscription.html">Inscription</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  
-  <main class="page-inner">
-    <div class="form-container card">
-      <h1>Formulaire d'inscription</h1>
-      <form>
-        <label for="name">Nom et prénom</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Adresse email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Numéro de téléphone</label>
-        <input type="tel" id="phone" name="phone" required>
-
-        <label for="age">Âge</label>
-        <input type="number" id="age" name="age" required>
-
-        <label for="education">Niveau d'étude</label>
-        <input type="text" id="education" name="education" required>
-
-        <label id="activities-label">Activités souhaitées (max. 3)</label>
-        <div class="multi-select" id="activities-select" data-max="3">
-          <button type="button" class="ms-toggle" aria-haspopup="listbox" aria-expanded="false">Sélectionner les activités</button>
-          <ul class="ms-options" role="listbox" aria-labelledby="activities-label" hidden>
-            <li><label><input type="checkbox" value="sciences"> Ateliers Scientifiques</label></li>
-            <li><label><input type="checkbox" value="arts"> Arts et Culture</label></li>
-            <li><label><input type="checkbox" value="sports"> Installations Sportives</label></li>
-            <li><label><input type="checkbox" value="robotique"> Atelier Robotique</label></li>
-            <li><label><input type="checkbox" value="theatre"> Atelier Théâtre</label></li>
-            <li><label><input type="checkbox" value="musique"> Atelier Musique</label></li>
-            <li><label><input type="checkbox" value="informatique"> Atelier Informatique</label></li>
-            <li><label><input type="checkbox" value="langues"> Ateliers de Langues</label></li>
-          </ul>
-          <input type="hidden" name="activities" id="activities-input" required>
-        </div>
-        <div id="activities-help" class="muted" style="font-size:13px;color:#6b6b6b;">Sélectionnez jusqu'à 3 activités. Cliquez pour ouvrir la liste.</div>
-        
-        <label for="message">Message (optionnel)</label>
-        <textarea id="message" name="message"></textarea>
-        
-        <button type="submit" class="btn-primary">S'inscrire</button>
-      </form>
-    </div>
-  </main>
-  <footer class="footer">
-   © 2025 NOVA HIGHT SCHOOL. Former les esprits de demain avec passion, innovation et excellence.
-  </footer>  
+                <div class="nav-links">
+                    <a href="../index.html">Accueil</a>
+                    <a href="programme.html">Programme</a>
+                    <a href="activites.html" class="active">Activités</a>
+                    <a href="inscription.html">Inscription</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </header>
 
 
- 
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+        <main class="page-inner">
+            <div class="form-container card">
+                <h1>Formulaire d'inscription</h1>
+                <form>
+                    <label for="name">Nom et prénom</label>
+                    <input type="text" id="name" name="name" required>
 
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', function(){
-        const isActive = navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-        hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
-      });
-      navLinks.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('active');
-          hamburger.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-    
-    const wrapper = document.getElementById('activities-select');
-    if (!wrapper) return;
-    const toggle = wrapper.querySelector('.ms-toggle');
-    const optionsList = wrapper.querySelector('.ms-options');
-    const checkboxes = optionsList.querySelectorAll('input[type="checkbox"]');
-    const hidden = document.getElementById('activities-input');
-    const max = Number(wrapper.dataset.max) || 3;
-    
-    try {
-      const saved = JSON.parse(localStorage.getItem('activities') || '[]');
-      if (Array.isArray(saved) && saved.length) {
-        checkboxes.forEach(cb => { if (saved.includes(cb.value)) cb.checked = true; });
-        updateHidden();
-        updateToggleText();
-      }
-    } catch(e){ /* ignore */ }
-    
-    toggle.addEventListener('click', function(e){
-      const open = !optionsList.hidden;
-      optionsList.hidden = open;
-      toggle.setAttribute('aria-expanded', String(!open));
-      if (!open) optionsList.querySelector('input[type="checkbox"]')?.focus();
-    });
-    
-    document.addEventListener('click', function(e){
-      if (!wrapper.contains(e.target) && !hamburger?.contains(e.target)) {
-        optionsList.hidden = true;
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-    
-    wrapper.addEventListener('keydown', function(e){
-      if (e.key === 'Escape') {
-        optionsList.hidden = true;
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      }
-    });
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" required>
 
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', function(){
-        const selected = Array.from(checkboxes).filter(c => c.checked);
-        if (selected.length > max) {
-          cb.checked = false;
-          alert('Vous pouvez sélectionner au maximum ' + max + ' activités.');
-          return;
-        }
-        updateHidden();
-        updateToggleText();
-        localStorage.setItem('activities', JSON.stringify(Array.from(checkboxes).filter(c=>c.checked).map(c=>c.value)));
-      });
-    });
-    
-    function updateHidden(){
-      const vals = Array.from(checkboxes).filter(c=>c.checked).map(c=>c.value);
-      hidden.value = vals.join(',');
-    }
-    
-    function updateToggleText(){
-      const labels = Array.from(checkboxes).filter(c=>c.checked).map(c=>c.parentElement.textContent.trim());
-      toggle.textContent = labels.length ? labels.join(', ') : 'Sélectionner les activités';
-    }
+                    <label for="phone">Numéro de téléphone</label>
+                    <input type="tel" id="phone" name="phone" required>
 
-    const form = wrapper.closest('form');
-    form?.addEventListener('submit', function(){ updateHidden(); });
-  });
-  </script> 
-</body>
+                    <label for="age">Âge</label>
+                    <input type="number" id="age" name="age" required>
+
+                    <label for="education">Niveau d'étude</label>
+                    <input type="text" id="education" name="education" required>
+
+                    <label id="activities-label">Activités souhaitées (max. 3)</label>
+                    <div class="multi-select" id="activities-select" data-max="3">
+                        <button type="button" class="ms-toggle" aria-haspopup="listbox" aria-expanded="false">Sélectionner les activités</button>
+                        <ul class="ms-options" role="listbox" aria-labelledby="activities-label" hidden>
+                            <li><label><input type="checkbox" value="sciences"> Ateliers Scientifiques</label></li>
+                            <li><label><input type="checkbox" value="arts"> Arts et Culture</label></li>
+                            <li><label><input type="checkbox" value="sports"> Installations Sportives</label></li>
+                            <li><label><input type="checkbox" value="robotique"> Atelier Robotique</label></li>
+                            <li><label><input type="checkbox" value="theatre"> Atelier Théâtre</label></li>
+                            <li><label><input type="checkbox" value="musique"> Atelier Musique</label></li>
+                            <li><label><input type="checkbox" value="informatique"> Atelier Informatique</label></li>
+                            <li><label><input type="checkbox" value="langues"> Ateliers de Langues</label></li>
+                        </ul>
+                        <input type="hidden" name="activities" id="activities-input" required>
+                    </div>
+                    <div id="activities-help" class="muted" style="font-size:13px;color:#6b6b6b;">Sélectionnez jusqu'à 3 activités. Cliquez pour ouvrir la liste.</div>
+
+                    <label for="message">Message (optionnel)</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <button type="submit" class="btn-primary">S'inscrire</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 NOVA High School.</p>
+            <p>Former les esprits de demain avec passion, innovation et excellence.</p>
+        </footer>
+
+        <script src="../scripts/script.js"></script>
+    </body>
 </html>
