@@ -27,6 +27,7 @@ body {
 .accueil-img img {
     width: 100%;
     height: 700px;
+    
 }
 
 .accueil-text {
@@ -93,7 +94,8 @@ h2 {
 .esca1, .esca2, .esca3 {
     color: #333333;
     padding: 15px 25px 15px 25px;
-    box-shadow: 0 10px 7px rgba(0, 0, 10, 0.5);
+    box-shadow: 0 10px 7px rgba(146, 70, 3, 0.455);
+   
 }
 
 .esca ul {
@@ -109,16 +111,16 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  
 }
-
-.accueil-cards .card {
-    border: 1px solid color #F1EADA;
-    background-color: #F1EADA;
-    padding: 25px 10px;
-    height: 530px;
-    width: 425px;
-    border-radius: 5%;
-    box-shadow: 0 10px 7px rgba(0, 0, 10, 0.5);
+.accueil-cards .card{
+     border: 1px solid color #F1EADA ;
+     background-color: #F1EADA ;
+     padding: 25px 10px ;
+     height: 530px;
+     width: 425px;
+     border-radius: 5%;
+    box-shadow: 0 10px 7px rgba(146, 70, 3, 0.455); 
 }
 
 .accueil-cards .card img {
@@ -165,20 +167,21 @@ h2 {
    height: 80px;
    width: 50rem;
    padding: 20px;
-   box-shadow: 0 10px 7px rgba(0,0,10,0.5);
+   box-shadow: 0 10px 7px rgba(146, 70, 3, 0.455);
    font-family: 'Poppins', serif;
    margin: 0 auto;  
   margin-top: 50px;
 }
-@media (max-width:800px){
+@media (max-width:764px){
 .accueil-text h1 {
    font-size: 3rem;
+   font-weight: 700;
 }
 .accueil-text p{
-    font-size: 1.3rem;
+    font-size: 0.5rem;
 }
 h2{
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 .text1 p{
     font-size: 2rem;
@@ -191,6 +194,8 @@ h2{
 }
 .esca1, .esca2, .esca3{
     margin: auto;  
+     width: 25rem;
+    height: 7rem;
 }
 .accueil-cards{
     display: flex;
@@ -201,8 +206,33 @@ h2{
    margin: auto; 
 }
 .warning-box{
-  width: 40rem;
+  width: 20rem;
+  height: 10rem;
 }
 
 }
+@media (min-width:764px) and (max-width:1466px) {
+    .accueil-text h1 {
+   font-size: 4rem;
+   font-weight: 700;
+}
+.accueil-text p{
+    font-size: 0.8rem;
+}
+.esca1, .esca2, .esca3{
+    margin: auto;  
+     width: 30rem;
+    height: 7rem;
+ }
+ .accueil-cards{
+    display: flex;
+    flex-direction: column;
+   gap: 3rem;
+   justify-content: center;
+   align-items: center;
+}
+.text1 p {
+    text-align: center;
+}
 
+ }
