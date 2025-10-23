@@ -24,10 +24,6 @@
     font-size: xx-large;
 }
 
-.accueil-text p {
-    font-size: x-large;
-}
-
 h2 span {
     color: #B59E7D;
 }
@@ -51,9 +47,8 @@ h2 {
 
 .esca {
     display: flex;
-    flex-direction: column; /* one under another */
-    /* justify-content: center; */
-    gap: 1rem;
+     flex-direction: column; 
+     gap: 1rem;
 }
 
 .esca1 {
@@ -143,15 +138,56 @@ h2 {
     font-weight: bold;
     font-family: 'Poppins', serif;
 }
+.btn a:hover{
+    color: #F1EADA;
+    background-color: #584738;
+}
 
-.warning-box {
-    background-color: #F1EADA;
-    border: 1px solid color;
-    margin: 0 auto; /* to center the border */
-    height: 80px;
-    width: 50rem;
-    padding: 20px;
-    box-shadow: 0 10px 7px rgba(0, 0, 10, 0.5);
-    font-family: 'Poppins', serif;
+.warning-box{
+   background-color: #F1EADA ;
+   border: 1px solid color;
+   margin: 50px;
+   height: 80px;
+   width: 50rem;
+   padding: 20px;
+   box-shadow: 0 10px 7px rgba(0,0,10,0.5);
+   font-family: 'Poppins', serif;
+   margin: 0 auto;  
+  margin-top: 50px;
+}
+@media (max-width:800px){
+.accueil-text h1 {
+   font-size: 3rem;
+}
+.accueil-text p{
+    font-size: 1.3rem;
+}
+h2{
+    font-size: 2.4rem;
+}
+.text1 p{
+    font-size: 2rem;
+    text-align: center;
+}
+.esca{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  
+}
+.esca1, .esca2, .esca3{
+    margin: auto;  
+}
+.accueil-cards{
+    display: flex;
+    flex-direction: column;
+   gap: 3rem;
+}
+.card{
+   margin: auto; 
+}
+.warning-box{
+  width: 40rem;
+}
+
 }
 
