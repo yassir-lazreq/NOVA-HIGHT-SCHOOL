@@ -33,6 +33,7 @@ body {
 }
 
 .form-container.card {
+    margin-top: 15px;
     width: 100%;
     max-width: 520px;
     background: var(--card-bg);
