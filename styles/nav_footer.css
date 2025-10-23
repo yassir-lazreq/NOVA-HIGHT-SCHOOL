@@ -124,6 +124,7 @@ nav a:hover {
         justify-content: center;
         padding: 5px;
         text-decoration: none;
+        
     }
 
     .hamburger.active .bar:nth-child(2) {
