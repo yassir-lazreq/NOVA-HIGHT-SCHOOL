@@ -69,7 +69,7 @@ h2{
 .esca1, .esca2, .esca3{
     color: #333333;
     padding: 15px 25px 15px 25px;
-    box-shadow: 0 10px 7px rgba(0,0,10,0.5);
+    box-shadow: 0 10px 7px rgba(146, 70, 3, 0.455);
    
 }
 .esca ul{
@@ -94,7 +94,7 @@ h2{
      height: 530px;
      width: 425px;
      border-radius: 5%;
-    box-shadow: 0 10px 7px rgba(0,0,10,0.5); 
+    box-shadow: 0 10px 7px rgba(146, 70, 3, 0.455); 
 }
 .accueil-cards .card img {
     width: 400px;
@@ -136,7 +136,7 @@ h2{
    height: 80px;
    width: 50rem;
    padding: 20px;
-   box-shadow: 0 10px 7px rgba(0,0,10,0.5);
+   box-shadow: 0 10px 7px rgba(146, 70, 3, 0.455);
    font-family: 'Poppins', serif;
    margin: 0 auto;  
   margin-top: 50px;
@@ -150,7 +150,7 @@ h2{
     font-size: 0.5rem;
 }
 h2{
-    font-size: 1rem;
+    font-size: 2rem;
 }
 .text1 p{
     font-size: 2rem;
@@ -186,7 +186,7 @@ h2{
    font-weight: 700;
 }
 .accueil-text p{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 .esca1, .esca2, .esca3{
     margin: auto;  
