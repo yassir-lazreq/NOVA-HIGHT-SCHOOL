@@ -33,6 +33,7 @@ body {
 }
 
 .form-container.card {
+    margin-top: 15px;
     width: 100%;
     max-width: 520px;
     background: var(--card-bg);
@@ -217,40 +218,43 @@ body {
 #activities-input {
     display: none;
 }
-
-@media (max-width: 520px) {
+@media (max-width: 900px) {
     .ms-options {
         left: 0;
         right: 0;
-        top: calc(100% + 6px);
-        max-height: 180px;
-    }
-    .ms-toggle {
-        padding: 12px;
-        font-size: 15px;
     }
 }
 
-@media (max-width: 720px) {
-    .page-inner {
-        padding: 28px 18px;
-    }
-    .site-header .inner {
-        padding: 12px 14px;
-    }
-    .main-nav {
-        display: none;
-    }
-    .form-container.card {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 520px) {
+@media (max-width: 600px) {
     main.page-inner {
         margin-top: 0;
         margin-bottom: 0;
-        padding-top: 12px;
-        padding-bottom: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .page-inner {
+        padding: 28px 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ms-options {
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .ms-options {
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    main.page-inner {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
