@@ -192,6 +192,7 @@ a:hover {
     font-family: 'Poppins', serif;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .warning-box:hover {
