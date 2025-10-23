@@ -17,19 +17,19 @@ body {
     line-height: 1.6;
     background-color: #f5f5f5;
     padding-top: calc(var(--nav-height) + 20px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .page-inner {
-    max-width: var(--max-width);
-    background: var(--beige);
-    border-radius: 6px;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06) inset;
-    padding: 0;
+    width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-grow: 1;
+    align-items: center;
+    flex: 1;
 }
 
 .form-container.card {
