@@ -20,10 +20,18 @@
    font-family: 'Poppins', serif;
     font-size: xx-large;
 }
-.accueil-text p{
- font-size: x- large;
-}
 
+/* .accueil-text p {
+    animation: moveText 25s linear infinite;
+}
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
   h2 span{
     color: #B59E7D; 
 }
@@ -128,6 +136,11 @@ h2{
     font-weight: bold;
     font-family: 'Poppins', serif;
 }
+.btn a:hover{
+    color: #F1EADA;
+    background-color: #584738;
+}
+
 .warning-box{
    background-color: #F1EADA ;
    border: 1px solid color;
@@ -138,5 +151,6 @@ h2{
    box-shadow: 0 10px 7px rgba(0,0,10,0.5);
    font-family: 'Poppins', serif;
    margin: 0 auto;   /*to center  the border */
+  margin-top: 50px;
 }
 
