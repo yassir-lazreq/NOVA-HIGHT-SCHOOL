@@ -1,53 +1,28 @@
-:root {
-    --brown-dark: #4a3b36;
-    --brown-medium: #7f614d;
-    --beige: #efe6d6;
-    --card-bg: #ffffff;
-    --accent: #caa77b;
-    --muted: #6b6b6b;
-    --radius: 8px;
-    --nav-height: 60px;
-    --primary-color: #584738;
-    --secondary-color: #f2f2f2;
-    --hover-color: #ddd;
-}
-
-html, body {
-    overflow-x: hidden;
-}
-
-body {
-    /* margin: 0;
-    padding: 0;
-    font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-    color: var(--text);
-    background: #6f6b68;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.45;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: var(--nav-height); */
-    min-height: 100vh;
-    /* Enable Flexbox on the body */
-    display: flex;
-    /* Stack children (header, main content, footer) vertically */
-    flex-direction: column;
-    /* Optional: Remove default margin/padding for a full-bleed layout */
-    align-items: center;
-}
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-height: 60px;
+    --primary-color: #584738;
+    --card-bg: #CFCABF;
+    --text-dark: #333;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    padding-top: calc(var(--nav-height) + 20px);
 }
 
 
 .page-inner {
     max-width: var(--max-width);
     background: var(--beige);
-    margin-top: 20px;
     border-radius: 6px;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06) inset;
     padding: 0;
@@ -271,23 +246,6 @@ body {
     }
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-top: var(--nav-height);
-}
-
-main.page-inner {
-    flex: 1 0 auto;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: var(--max-width, 100vw);
-    padding-top: 18px;
-    padding-bottom: 18px;
-}
-
 @media (max-width: 520px) {
     main.page-inner {
         margin-top: 0;
@@ -296,18 +254,3 @@ main.page-inner {
         padding-bottom: 12px;
     }
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-footer {
-    margin-top: 0;
-}
-
-nav {
-    height: 4.5em;
-}
-
