@@ -99,6 +99,7 @@ nav a:hover {
     cursor: pointer;
     z-index: 1001;
     padding: 5px;
+    background: #584738;
 }
 
 .bar {
@@ -110,6 +111,7 @@ nav a:hover {
     transition: all 0.3s ease-in-out;
     background-color: #fff;
     border-radius: 2px;
+    
 }
 
 /* Mobile Styles */
@@ -124,7 +126,8 @@ nav a:hover {
         justify-content: center;
         padding: 5px;
         text-decoration: none;
-        
+        border: none;
+
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -152,6 +155,8 @@ nav a:hover {
         padding: 20px 0;
         gap: 0;
         z-index: 1000;
+        
+        
     }
 
     .nav-links a {
