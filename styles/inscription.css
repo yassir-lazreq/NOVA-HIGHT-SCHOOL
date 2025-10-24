@@ -8,7 +8,14 @@
     --nav-height: 60px;
     --primary-color: #584738;
     --card-bg: #CFCABF;
-    --text-dark: #333;
+    --text-dark: #1f1f1f;
+    --brown-medium: #584738;
+    --brown-dark: #3f2f28;
+    --muted: #6b6b6b;
+    --text: var(--text-dark);
+    --accent: #c49a6e;
+    --radius: 8px;
+    --shadow: 0 6px 18px rgba(0,0,0,0.06);
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -47,7 +54,7 @@ body {
     font-size: 18px;
     text-align: center;
     margin-bottom: 12px;
-    color: var(--brown-medium);
+    color: var(--text-dark);
 }
 
 .form-container form {
@@ -59,7 +66,7 @@ body {
 
 .form-container label {
     font-size: 13px;
-    color: var(--muted);
+    color: var(--text-dark);
     margin-bottom: 6px;
 }
 
@@ -100,14 +107,14 @@ body {
     border: 1px solid rgba(204, 160, 100, 0.18);
     padding: 10px 12px;
     border-radius: 8px;
-    color: #7a5a32;
+    color: var(--text-dark);
     font-size: 13px;
 }
 
 .btn-primary {
     margin-top: 6px;
     background: var(--brown-medium);
-    color: var(--card-bg);
+    color: #ffffff;
     border: none;
     padding: 11px 14px;
     border-radius: 8px;
@@ -213,6 +220,11 @@ body {
 
 #activities-help {
     margin-top: 8px;
+}
+
+.form-container .muted,
+#activities-help.muted {
+    color: var(--text-dark);
 }
 
 #activities-input {

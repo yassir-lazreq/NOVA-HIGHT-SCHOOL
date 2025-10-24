@@ -40,6 +40,11 @@ NOVA HIGH SCHOOL is a multi-page website for a school's open house day (Journée
 
 View the site on GitHub Pages: [NOVA HIGH SCHOOL](https://yassir-lazreq.github.io/NOVA-HIGHT-SCHOOL/)
 
+## resources
+- [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)
+- [SVG Icons - Heroicons](https://heroicons.com/)
+- [Canva Design](https://www.canva.com/design/DAG2haVSZ1c/8JxEslMTum6A8BS7JgTCfQ/edit?utm_content=DAG2haVSZ1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- [Figma Design](https://www.figma.com/design/c8rp8RaqnxYJfwjfqFiEKT/NOVA-HIGHT-SCHOOL?node-id=1-2&t=Dpn1yaF9mdCddBRj-1)
 ## Pages
 
 - **Accueil** - Home page with welcome message and overview of facilities
