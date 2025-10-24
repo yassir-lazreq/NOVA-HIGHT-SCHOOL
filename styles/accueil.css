@@ -135,7 +135,7 @@ h2 {
 
 .accueil-cards p {
     color: #333333;
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
     text-align: center;
     line-height: 1.8rem;
 }
