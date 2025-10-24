@@ -110,6 +110,7 @@
     width: 100%;
     margin: 0;
   }
+  
 
   .timeall {
     border: none;
@@ -117,7 +118,7 @@
     width: 90%;
     height: auto;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 5rem;
     margin: 2rem 0;
     overflow-x: hidden;
   }
@@ -174,6 +175,20 @@
   .timeall span {
    
     margin-left: 13.5rem;
+  }
+  .timeline-item1 ,.timeline-item3 ,.timeline-item5 {
+    display: flex;
+    flex-flow: column;
+    margin-left: 0rem;
+
+     
+
+}
+.timeline-item0,.timeline-item1,.timeline-item2,.timeline-item3,.timeline-item4,.timeline-item5,.timeline-item6 {
+    margin: 2rem;
+    width: 100%;
+    height: auto;
+    position: relative;
   }
 }@media ( max-width: 690px) {
   .line {
