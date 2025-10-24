@@ -57,7 +57,7 @@ View the site on GitHub Pages: [NOVA HIGH SCHOOL](https://yassir-lazreq.github.i
 
 - HTML5
 - CSS3 (Grid, Flexbox, Media Queries)
-- JavaScript (ES6)
+- JavaScript 
 - SVG Icons
 - Google Maps Embed
 
